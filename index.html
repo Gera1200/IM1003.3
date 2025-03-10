@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Profesional</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <nav id="menu">
+            <ul>
+                <li onclick="showSection('inicio')">Inicio</li>
+                <li onclick="showSection('sobre-mi')">Sobre Mí</li>
+                <li onclick="showSection('objetivo-profesional')">Objetivo</li>
+                <li onclick="showSection('experiencia')">Experiencia</li>
+                <li onclick="showSection('formacion')">Formación</li>
+                <li onclick="showSection('idiomas')">Idiomas</li>
+                <li onclick="showSection('certificaciones')">Certificaciones</li>
+                <li onclick="showSection('habilidades')">Habilidades</li>
+                <li onclick="showSection('contacto')">Contacto</li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="inicio" class="seccion activa">
+            <h1>Bienvenido a mi perfil profesional</h1>
+            <img src="foto.jpg" alt="Foto de perfil" class="perfil">
+            <p class="intro">Desarrollador web apasionado por crear soluciones innovadoras.</p>
+        </section>
+        <section id="sobre-mi" class="seccion">
+            <h2>Sobre Mí</h2>
+            <p>Información personal y trayectoria.</p>
+        </section>
+        <section id="objetivo-profesional" class="seccion">
+            <h2>Objetivo Profesional</h2>
+            <p>Descripción de mis metas y aspiraciones.</p>
+        </section>
+        <section id="experiencia" class="seccion">
+            <h2>Experiencia Profesional</h2>
+            <div class="experiencia-lista">
+                <button onclick="toggleInfo('exp1')">Trabajo 1</button>
+                <p id="exp1" class="info oculto">Detalles del trabajo 1.</p>
+                <button onclick="toggleInfo('exp2')">Trabajo 2</button>
+                <p id="exp2" class="info oculto">Detalles del trabajo 2.</p>
+            </div>
+        </section>
+        <section id="formacion" class="seccion">
+            <h2>Formación Académica</h2>
+            <div class="formacion-lista">
+                <button onclick="toggleInfo('form1')">Carrera 1</button>
+                <p id="form1" class="info oculto">Detalles de la carrera 1.</p>
+                <button onclick="toggleInfo('form2')">Carrera 2</button>
+                <p id="form2" class="info oculto">Detalles de la carrera 2.</p>
+            </div>
+        </section>
+        <section id="idiomas" class="seccion">
+            <h2>Idiomas</h2>
+            <p>Lista de idiomas hablados.</p>
+        </section>
+        <section id="certificaciones" class="seccion">
+            <h2>Certificaciones</h2>
+            <p>Certificados obtenidos.</p>
+        </section>
+        <section id="habilidades" class="seccion">
+            <h2>Habilidades</h2>
+            <div class="habilidades-lista">
+                <div class="habilidad">HTML</div>
+                <div class="habilidad">CSS</div>
+                <div class="habilidad">JavaScript</div>
+                <div class="habilidad">React</div>
+            </div>
+        </section>
+        <section id="contacto" class="seccion">
+            <h2>Contacto</h2>
+            <form id="contacto-form">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="mensaje" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
